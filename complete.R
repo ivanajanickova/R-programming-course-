@@ -7,9 +7,9 @@ complete <- function(directory, id = 1 : 332) {
   nobs <- c(1 : length(id))
   for(i in id) {
     if(i < 10) {
-      i_new <- paste0("00", i, ".csv")
+      i_new <- paste0("00", i, ".csv") #the files were saved as "001.csv" - "332.csv"
       csv <- read.csv(i_new)
-      nobs[index] = nrow(na.omit(csv))
+      nobs[index] = nrow(na.omit(csv)) #calculates the number of complete cases for a monitor 
       index <- index + 1
     }
     else if(i >=  10 && i < 100) {
