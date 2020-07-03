@@ -1,3 +1,6 @@
+#This function woks with data from monitoring sufate and nitrate levels on 332 monitors
+##This function takes directory of the files and the NOs of monitors (IDs)
+###It returs a data.frame with the ID of monitor and numer of complete observation for given monitor
 complete <- function(directory, id = 1 : 332) {
   setwd(paste0("C:/Users/Ivana/",directory))
   index <- 1
